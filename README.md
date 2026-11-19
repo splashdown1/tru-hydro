@@ -6,7 +6,24 @@ Setup · light · water · nutrients · steps to fruit or flower.
 Source-bound practical ranges.
 A gap stays a gap.
 
-Live: (GitHub Pages optional)
+---
+
+## Blueprints & Walkthrough
+
+Four technical diagrams accompany this card (blueprint style):
+
+1. **Kratky side-cutaway** — passive system with air gap forming as solution level drops.
+2. **DWC bucket side-cutaway** — aerated roots, air stone, external pump.
+3. **Kratky jar step-by-step** — 6-panel build walkthrough (materials → finished under light).
+4. **Light & nutrient stages schematic** — leafy greens vs fruiting crops (PPFD, photoperiod, N-P-K shift, support).
+
+These images are generated as clean engineering-style line drawings. Download them from the associated conversation artifacts or add the JPG files to an `/images` folder in this repo for local/GitHub Pages use.
+
+Suggested filenames:
+- `kratky-cutaway.jpg`
+- `dwc-bucket-cutaway.jpg`
+- `kratky-step-by-step.jpg`
+- `light-nutrient-stages.jpg`
 
 ---
 
