@@ -2,9 +2,11 @@
 
 **Offline field card for hydroponic plant growing.**
 
-Setup · light · water · nutrients · steps to fruit or flower.
-Source-bound practical ranges.
+Setup · light · water · nutrients · steps to fruit or flower.  
+Source-bound practical ranges.  
 A gap stays a gap.
+
+**Run it:** open [index.html](index.html) locally or via the repo. Single file, zero network.
 
 ---
 
