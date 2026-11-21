@@ -41,17 +41,17 @@ const H=[
 {t:"Materials minimum",d:"Opaque container + lid, net pots, media (clay pebbles / LECA or rockwool), hydroponic nutrient (not soil fertilizer), pH meter or kit + up/down solutions, EC/TDS meter (know your scale: often EC × 500 ≈ ppm), thermometer, timer + lights if indoor, air pump and stone for DWC."},
 {t:"Gap",d:"No complete commercial system design, no variety-specific recipes, no brand nutrient schedules, no live sensor integration. Practical starter ranges and steps only. Measure your own solution and plants. Specific labels and local water chemistry override general numbers. If a number or step is missing for your exact crop or conditions, that is a gap."}
 ];
-function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
-function card(x){return `<article class=\"card\"><div class=\"k\">HYDRO</div><div class=\"big\">${esc(x.t)}</div><div>${esc(x.d)}</div><div class=\"src\">Source-bound practical ranges from extension and grower references. Measure; do not guess. A gap stays a gap.</div></article>`;}
-function show(list){document.getElementById(\"out\").innerHTML=list.map(card).join(\"\");}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&","<":"<",">":">"}[c]));}
+function card(x){return '<article class="card"><div class="k">HYDRO</div><div class="big">'+esc(x.t)+'</div><div>'+esc(x.d)+'</div><div class="src">Source-bound practical ranges from extension and grower references. Measure; do not guess. A gap stays a gap.</div></article>';}
+function show(list){document.getElementById('out').innerHTML=list.map(card).join('');}
 function search(q){
-  q=(q||\"\").trim().toLowerCase();
+  q=(q||'').trim().toLowerCase();
   if(!q){show(H);return;}
-  const hits=H.filter(x=>(x.t+\" \"+x.d).toLowerCase().includes(q));
-  document.getElementById(\"out\").innerHTML=hits.length?hits.map(card).join(\"\"):`<article class=\"card\"><div class=\"k\">GAP</div><div class=\"big\">Not packed</div><div>No complete commercial design or variety recipe on this card. Practical starter ranges only.</div></article>`;
+  const hits=H.filter(x=>(x.t+' '+x.d).toLowerCase().includes(q));
+  document.getElementById('out').innerHTML=hits.length?hits.map(card).join(''):'<article class="card"><div class="k">GAP</div><div class="big">Not packed</div><div>No complete commercial design or variety recipe on this card. Practical starter ranges only.</div></article>';
 }
-document.getElementById(\"send\").onclick=()=>search(document.getElementById(\"q\").value);
-document.getElementById(\"q\").onkeydown=e=>{if(e.key===\"Enter\")search(e.target.value);};
+document.getElementById('send').onclick=function(){search(document.getElementById('q').value);};
+document.getElementById('q').onkeydown=function(e){if(e.key==='Enter')search(e.target.value);};
 show(H);
 </script>
 </body>
